@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block title %}STEM Outreach | Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">COMMUNITY ENHANCEMENT PROJECT</span>
+    <h1>Make learning <span>hands-on.</span><br>Make curiosity count.</h1>
+    <p>A simple digital platform to plan STEM outreach, share low-cost activities, and collect real student feedback about science, technology, engineering and mathematics.</p>
+    <div class="actions"><a class="btn" href="{{ url_for('survey') }}">Take the STEM survey</a><a class="btn secondary" href="{{ url_for('activities') }}">Explore activities</a></div>
+    <div class="metrics"><div><strong>4</strong><small>Starter activities</small></div><div><strong>{{ question_count }}</strong><small>Survey questions</small></div><div><strong>₹0</strong><small>Free to run locally</small></div></div>
+  </div>
+  <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="science-card"><span class="big-icon">⚛</span><h3>Explore · Build · Test</h3><p>Small experiments can spark big ideas.</p><div class="chips"><span>Science</span><span>Technology</span><span>Engineering</span><span>Maths</span></div></div><span class="float f1">＋</span><span class="float f2">π</span><span class="float f3">⌘</span></div>
+</section>
+<section class="section">
+  <div class="section-heading"><span class="eyebrow">THE PLATFORM</span><h2>From outreach idea to measurable learning</h2><p>Designed around the STEM Outreach for School Children CEP topic.</p></div>
+  <div class="feature-grid">
+    <article class="feature"><span class="feature-icon">🧪</span><h3>Activity library</h3><p>Use beginner-friendly activities with materials, steps, time and learning outcomes.</p></article>
+    <article class="feature"><span class="feature-icon">📋</span><h3>Structured survey</h3><p>Collect feedback on STEM interest, hands-on learning, coding awareness and device access.</p></article>
+    <article class="feature"><span class="feature-icon">📊</span><h3>Live analysis</h3><p>View percentages calculated only from real responses saved by this application.</p></article>
+  </div>
+</section>
+<section class="callout"><div><span class="eyebrow">START HERE</span><h2>Every answer helps shape a better session.</h2><p>Ask permission first, keep responses anonymous, and use the results to plan suitable activities.</p></div><a class="btn" href="{{ url_for('survey') }}">Open survey →</a></section>
+{% endblock %}

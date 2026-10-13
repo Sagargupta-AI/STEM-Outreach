@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}STEM activities{% endblock %}
+{% block content %}<section class="page-head"><span class="eyebrow">LEARN BY DOING</span><h1>Low-cost STEM activities</h1><p>Choose age-appropriate activities and adapt them with teacher guidance.</p></section>
+<div class="activity-grid">{% for a in activities %}<article class="panel activity-card"><div class="activity-top"><span class="category">{{ a.category }}</span><span class="duration">◷ {{ a.duration }}</span></div><h2>{{ a.title }}</h2><p><b>Materials</b><br>{{ a.materials }}</p><p><b>Steps</b><br>{{ a.steps }}</p><div class="outcome"><b>Learning outcome</b><br>{{ a.learning_outcome }}</div></article>{% endfor %}</div>
+<div class="notice">Safety: use only age-appropriate materials, avoid mains electricity or hazardous substances, and conduct activities with teacher supervision.</div>{% endblock %}

@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}STEM Survey{% endblock %}
+{% block content %}<section class="page-head"><span class="eyebrow">FEEDBACK FORM</span><h1>STEM learning survey</h1><p>Choose one answer for each question. Do not enter children's names or sensitive personal details.</p></section>
+<form method="post" class="survey-form panel"><label>Optional anonymous respondent code<input name="respondent_code" maxlength="30" placeholder="e.g. S-01 (leave blank for Anonymous)"></label>
+{% for key, prompt, options in questions %}<fieldset><legend><span class="q-number">{{ loop.index }}</span>{{ prompt }}</legend><div class="option-grid">{% for option in options %}<label class="option"><input type="radio" name="{{ key }}" value="{{ option }}" required><span>{{ option }}</span></label>{% endfor %}</div></fieldset>{% endfor %}
+<button class="btn" type="submit">Submit response →</button></form>{% endblock %}
